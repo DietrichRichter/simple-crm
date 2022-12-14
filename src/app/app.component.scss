@@ -4,7 +4,6 @@
 
 .menu-icon {
     cursor: pointer;
-    margin-left: 15px;
     margin-right: 15px;
 }
 
@@ -46,5 +45,14 @@ mat-toolbar, mat-toolbar-row {
         &:hover {
             background-color: rgba(0, 0, 0, 0.05);
         }
+
+        &:focus {
+            outline: none;
+        }
     }
+}
+
+.router-container {
+    padding-left: 56px;
+    padding-top: 16px;
 }
