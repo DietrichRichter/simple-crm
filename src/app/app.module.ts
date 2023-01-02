@@ -23,6 +23,8 @@ import { environment } from '../environments/environment';
 import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore/'; 
 import { FIREBASE_OPTIONS } from '@angular/fire/compat';
+import {MatProgressBarModule} from '@angular/material/progress-bar';
+import {MatCardModule} from '@angular/material/card';
 
 
 
@@ -49,8 +51,10 @@ import { FIREBASE_OPTIONS } from '@angular/fire/compat';
     MatTooltipModule,
     FormsModule,
     AngularFirestoreModule,
+    MatProgressBarModule,
     provideFirebaseApp(() => initializeApp(environment.firebase)),
-    provideFirestore(() => getFirestore())
+    provideFirestore(() => getFirestore()),
+    MatCardModule
   ],
   providers: [
     { provide: FIREBASE_OPTIONS, useValue: environment.firebase }
